@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<odoo>
+    <record model="ir.ui.view" id="product_template_form_view_inh">
+        <field name="name">product.template.common.form</field>
+        <field name="model">product.template</field>
+        <field name="inherit_id" ref="product.product_template_form_view"/>
+        <field name="arch" type="xml">
+            <xpath expr="//notebook/page[@name='general_information']" position="after">
+                <page name="extra_information" string="Extra Informantion">
+                    <group>
+                        <group>
+                            <field name="stock_group_id"/>
+                            <field name="stock_unit_id" />
+                            <field name="prompt_id"/>
+                            <field name="notes_id"/>
+                            <field name="ratio_id"/>
+                            <field name="udf1_id"/>
+                            <field name="udf2_id"/>
+                            <field name="udf3_id"/>
+                            <field name="udf4_id"/>
+                        </group>
+                        <group>
+                            <field name="pack_size_popup"/>
+                            <field name="print_components"/>
+                            <field name="kitset"/>
+                            <field name="internet_sequence"/>
+                            <field name="internet_short_desc"/>
+                            <field name="internet_description"/>
+                            <field name="information_description"/>
+                            <field name="internet_promotion"/>
+                            <field name="internet_video_url"/>
+                        </group>
+                    </group>
+                    <group>
+                        <group>
+                            <field name="internet_active"/>
+                            <field name="internet_isfeatured" />
+                            <field name="label_number"/>
+                            <field name="gst_rate"/>
+                            <field name="default_margin"/>
+                            <field name="weight"/>
+                            <field name="volume"/>
+                            <field name="loyalty_scheme"/>
+                            <field name="weight_item"/>
+                        </group>
+                        <group>
+                            <field name="head_office_pricing"/>
+                            <field name="internet_active"/>
+                            <field name="internet_cluster_id"/>
+                            <field name="availability"/>
+                            <field name="serial_number"/>
+                            <field name="web_id"/>
+                        </group>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
